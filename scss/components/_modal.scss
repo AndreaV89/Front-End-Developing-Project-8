@@ -1,0 +1,103 @@
+// Modal Styles
+
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($color: black, $alpha: .8);
+}
+
+#cardContainer {
+    position: fixed;
+    width: 300px;
+    top: 100px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    @include tablet-mq {
+        width: 450px;
+    }
+    @include desktop-mq {
+        width: 500px;
+        top: 150px;
+        height: 420px;
+    }
+}
+
+#cardContainer span {
+    color: white;
+    margin: auto;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+#selectedCard {
+    font-size: .8em;
+    width: 250px;
+    background-color: white;
+    border: 2px solid rgba($color: lightgrey, $alpha: .6);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    @include tablet-mq {
+        width: 300px;
+    }
+    @include desktop-mq {
+        width: 350px;
+        font-size: .9em;
+        padding-bottom: 30px;
+    }
+}
+
+#selectedCard img {
+    border-radius: 50%;
+    width: 100px;
+    margin: auto;
+    @include desktop-mq {
+        width: 130px;
+        margin-bottom: 5px;
+    }
+}
+
+#exitModal {
+    cursor: pointer;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    margin: 0 0 0 auto;
+}
+
+#modalLine {
+    border: 1px solid rgba($color: lightgrey, $alpha: .6);
+    margin: 5px 0;
+    @include desktop-mq {
+        margin: 20px 0;
+    }
+}
+
+.selectedCard-text {
+    display: flex;
+    flex-direction: column;
+    @include tablet-mq {
+        padding: 10px 20px;
+    }
+    @include desktop-mq {
+        padding: 10px 30px 30px 30px;
+    }
+}
+
+.selectedCard-text h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    @include desktop-mq {
+        margin-top: 5px;
+    }
+}
+
+
+

@@ -13,7 +13,7 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        gap: 25px;
+        gap: 20px;
     }
     @include desktop-mq {
         grid-template-columns: 1fr 1fr 1fr;
@@ -26,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     border-top: 1px solid rgba($color: lightgrey, $alpha: .6);
-    font-size: .8em;
+    font-size: .7em;
     padding: 15px 0;
     @include tablet-mq {
         flex-direction: row;
@@ -91,14 +91,4 @@ h1 {
     border: 1px solid rgba($color: lightgrey, $alpha: .6);
     border-radius: 5px;
     padding-left: 10px;
-}
-
-#modal-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba($color: black, $alpha: .5);
 }
