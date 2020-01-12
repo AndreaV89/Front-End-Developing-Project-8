@@ -54,10 +54,10 @@ function generateHTML (arr){
 // Search Filter
 
 $search.on('keyup', function(){
-    var input = $search.val().trim().toLowerCase();
-    for (var i = 0; i < employeeArray.length; i++) {
-        var name = employeeArray[i].firstName.toLowerCase() + ' ' + employeeArray[i].lastName.toLowerCase();
-        var NameController = name.includes(input);
+    let input = $search.val().trim().toLowerCase();
+    for (let i = 0; i < employeeArray.length; i++) {
+        let name = employeeArray[i].firstName.toLowerCase() + ' ' + employeeArray[i].lastName.toLowerCase();
+        let NameController = name.includes(input);
         if(NameController) {
             $('#employee-container').children().eq(i).show();
         } else {
