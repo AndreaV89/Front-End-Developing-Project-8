@@ -28,13 +28,21 @@ body {
     border-top: 1px solid rgba($color: lightgrey, $alpha: .6);
     font-size: .7em;
     padding: 15px 0;
+    transition: border .6s linear,
+                transform .1s linear;
     @include tablet-mq {
         flex-direction: row;
         border: 2px solid rgba($color: lightgrey, $alpha: .6);
         border-radius: 5px;
         padding: 0;
         height: 150px;
+        font-size: .8em;
     }
+}
+
+.card:hover {
+    border: 2px solid grey;
+    transform: scale(1.02);
 }
 
 .card img {
@@ -42,7 +50,7 @@ body {
     width: 100px;
     border-radius: 50%;
     @include tablet-mq {
-        margin: 23px 20px;
+        margin: 23px 10px 23px 20px;
         width: 100px;
     }
 }

@@ -1,17 +1,15 @@
 const container = document.getElementById('employee-container');
 const modalContainer = document.getElementById('modal-container');
 const $search = $('#search');
-const $cards = document.getElementsByClassName('card');
 
 // Fetch Employee
 
 fetch('https://randomuser.me/api/?results=12&nat=us')
     .then(response => response.json())
     .then(data => {
-        // console.log(data.results);
         createArray(data.results);
         generateHTML(employeeArray);
-    })
+    });
 
 // Create Employee Array
 
@@ -76,7 +74,7 @@ $('document').ready(function() {
         $('#modal-container').css('display', 'block');
         return index;
     });
-})
+});
 
 // Create Modal Card
 
@@ -119,8 +117,8 @@ $('document').ready(function() {
         modalHTML = "";
         $('#cardContainer').remove();
         $('#modal-container').css('display', 'none');
-    })
-})
+    });
+});
 
 // Modal Arrow 
 
@@ -130,8 +128,8 @@ $('document').ready(function() {
         modalHTML = "";
         $('#cardContainer').remove();
         generateModalHTML(index);
-    })
-})
+    });
+});
 
 $('document').ready(function() {
     $('#modal-container').on('click', '#rightArrow', function() {
@@ -139,6 +137,6 @@ $('document').ready(function() {
         modalHTML = "";
         $('#cardContainer').remove();
         generateModalHTML(index);
-    })
-})
+    });
+});
 
