@@ -41,8 +41,11 @@ body {
 }
 
 .card:hover {
-    border: 2px solid grey;
-    transform: scale(1.02);
+    @include tablet-mq {
+        border: 2px solid grey;
+        transform: scale(1.02);
+    }
+
 }
 
 .card img {

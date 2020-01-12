@@ -7,6 +7,7 @@ const $search = $('#search');
 fetch('https://randomuser.me/api/?results=12&nat=us')
     .then(response => response.json())
     .then(data => {
+        console.log(data.results);
         createArray(data.results);
         generateHTML(employeeArray);
     });
@@ -23,7 +24,7 @@ function createArray(data) {
            'email': element.email,
            'phone': element.cell,
            'city': element.location.city,
-           'state': element.location.country,
+           'state': element.location.state,
            'streetName': element.location.street.name,
            'streetNumber': element.location.street.number,
            'postcode': element.location.postcode,
@@ -91,7 +92,7 @@ function generateModalHTML(index) {
     modalHTML += `<p>${employeeArray[index].city}</p>`;
     modalHTML += '<div id="modalLine"></div>';
     modalHTML += `<p>${employeeArray[index].phone}</p>`;
-    modalHTML += `<p>${employeeArray[index].streetNumber} ${employeeArray[index].streetName}, ${employeeArray[index].postcode}</p>`;
+    modalHTML += `<p>${employeeArray[index].streetNumber} ${employeeArray[index].streetName}, ${employeeArray[index].state} ${employeeArray[index].postcode}</p>`;
     modalHTML += `<p>Birthday: ${employeeArray[index].birthdate}</p>`;
     modalHTML += '</div>';
     modalHTML += '</div>';
