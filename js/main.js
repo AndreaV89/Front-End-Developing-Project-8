@@ -1,4 +1,6 @@
 const container = document.getElementById('employee-container');
+const $search = $('#search');
+const cards = document.getElementsByClassName('card');
 
 // Fetch Employee
 
@@ -32,7 +34,7 @@ function createArray(data) {
     return employeeArray;
 }
 
-// create HTML
+// Create HTML
 
 let html = "";
 function generateHTML (arr){
@@ -48,3 +50,25 @@ function generateHTML (arr){
     }
     container.innerHTML = html;
 }
+
+// Search Filter
+
+$search.on('keyup', function(){
+    var input = $search.val().trim().toLowerCase();
+    for (var i = 0; i < employeeArray.length; i++) {
+        var name = employeeArray[i].firstName.toLowerCase() + ' ' + employeeArray[i].lastName.toLowerCase();
+        var NameController = name.includes(input);
+        if(NameController) {
+            $('#employee-container').children().eq(i).show();
+        } else {
+            $('#employee-container').children().eq(i).hide();
+        } 
+    }  
+});
+
+// Create Modal 
+
+let modalHTML = "";
+container.on('click', function(){
+    alert("create modal");
+});

@@ -84,10 +84,21 @@ h1 {
 }
 
 #search {
+    outline: none;
     width: 200px;
     height: 30px;
     margin: auto;
     border: 1px solid rgba($color: lightgrey, $alpha: .6);
     border-radius: 5px;
     padding-left: 10px;
+}
+
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($color: black, $alpha: .5);
 }
